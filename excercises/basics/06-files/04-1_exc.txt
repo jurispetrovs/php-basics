@@ -1,0 +1,4 @@
+﻿John,Wick,31
+Jackie,Chan,45
+Juris,Petrovs,25
+Normunds,Padeks,56
