@@ -18,44 +18,45 @@ Employee 3	$10.00			73
 */
 
 $employees = [
-	[
-		'name' => 'Employee 1',
-		'base pay' => 7.50,
-		'hours worked' => 35
-	],
-	[
-		'name' => 'Employee 2',
-		'base pay' => 8.20,
-		'hours worked' => 47
-	],
-	[
-		'name' => 'Employee 3',
-		'base pay' => 10.00,
-		'hours worked' => 73
-	]
+    [
+        'name' => 'Employee 1',
+        'base pay' => 7.50,
+        'hours worked' => 35
+    ],
+    [
+        'name' => 'Employee 2',
+        'base pay' => 8.20,
+        'hours worked' => 47
+    ],
+    [
+        'name' => 'Employee 3',
+        'base pay' => 10.00,
+        'hours worked' => 73
+    ]
 ];
 
-function totalPay(float $basePay, int $hoursWorked) {
-	$paid = 0;
-	if ($basePay < 8) {
-		echo "Oh, base pay must not be less than the minimum wage ($8.00 an hour)" . PHP_EOL;
-	} elseif ($hoursWorked >= 60) {
-		echo "Oh, number of hours is greater than 60" . PHP_EOL;
-	} else {
-		if ($hoursWorked <= 40) {
-			echo $paid = $basePay * $hoursWorked . PHP_EOL;
-		} else {
-			$overtime = $hoursWorked - 40;
-			echo "$" . $paid = 40 * $basePay + $overtime * $basePay * 1.5 . PHP_EOL; 
-		}
-	}
+function totalPay(float $basePay, int $hoursWorked): void
+{
+    if ($basePay < 8) {
+        echo 'Oh, base pay must not be less than the minimum wage ($8.00 an hour)' . PHP_EOL;
+    } elseif ($hoursWorked >= 60) {
+        echo 'Oh, number of hours is greater than 60' . PHP_EOL;
+    } else {
+        if ($hoursWorked <= 40) {
+            echo $paid = $basePay * $hoursWorked . PHP_EOL;
+        } else {
+            $overtime = $hoursWorked - 40;
+            echo '$' . $paid = 40 * $basePay + $overtime * $basePay * 1.5 . PHP_EOL;
+        }
+    }
 }
 
-function calculateForAllEmployees($employees) {
-	foreach ($employees as $key => $employee) {
-		echo "[{$employee['name']}] ";
-		totalPay($employee['base pay'], $employee['hours worked']);
-	}
+function calculateForAllEmployees($employees): void
+{
+    foreach ($employees as $key => $employee) {
+        echo '[' . $employee['name'] . ']';
+        totalPay($employee['base pay'], $employee['hours worked']);
+    }
 }
 
 calculateForAllEmployees($employees);

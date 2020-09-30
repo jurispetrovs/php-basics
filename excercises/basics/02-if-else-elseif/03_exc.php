@@ -9,7 +9,7 @@ Given variables (string) "hello" create a condition that if the given value is "
 $string = 'hello';
 
 if ($string === 'hello') {
-	echo "$string world";
+    echo $string . ' world';
 } else {
-	echo "The word is not a 'hello'";
+    echo "The word is not a 'hello'";
 }

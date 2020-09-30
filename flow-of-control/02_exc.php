@@ -1,14 +1,17 @@
 <?php
 
-echo "Enter the number: ";
-$a = (int) readline();
+/*
 
-//todo print if number is positive or negative
+print if number is positive or negative
+
+*/
+
+$a = (int)readline('Enter the number: ');
 
 if ($a < 0) {
-	echo "The number {$a} is negative";
-} elseif($a > 0) {
-	echo "The number {$a} is positive";
+    echo 'The number ' . $a . ' is negative';
+} elseif ($a > 0) {
+    echo 'The number ' . $a . ' is positive';
 } else {
-	echo "The number is zero";
+    echo 'The number is zero';
 }

@@ -26,73 +26,79 @@ Display an error message if the user enters a number outside the range of 1 thro
 
 */
 
-class Geometry {
-	public static function circleArea(float $radius) {
-		if ($radius < 0) {
-			return "The circle’s radius can't be negative" . PHP_EOL;
-		} else {
-			return number_format(M_PI * pow($radius, 2), 2);
-		}
-	}
+class Geometry
+{
+    public static function circleArea(float $radius): float
+    {
+        if ($radius < 0) {
+            return "The circle’s radius can't be negative" . PHP_EOL;
+        } else {
+            return number_format(M_PI * pow($radius, 2), 2);
+        }
+    }
 
-	public static function rectangleArea(float $lengt, float $width) {
-		if ($lengt < 0 || $width < 0) {
-			return "The rectangle’s length or width can't be negative" . PHP_EOL;
-		} else {
-			return $lengt * $width;
-		}
-	}
+    public static function rectangleArea(float $length, float $width): float
+    {
+        if ($length < 0 || $width < 0) {
+            return "The rectangle’s length or width can't be negative" . PHP_EOL;
+        } else {
+            return $length * $width;
+        }
+    }
 
-	public static function triangleArea(float $base, float $height) {
-		if ($base < 0 || $height < 0) {
-			return "The triangle’s base or height can't be negative" . PHP_EOL;
-		} else {
-			return $base * $height * 0.5;
-		}
-	}
+    public static function triangleArea(float $base, float $height): float
+    {
+        if ($base < 0 || $height < 0) {
+            return "The triangle’s base or height can't be negative" . PHP_EOL;
+        } else {
+            return $base * $height * 0.5;
+        }
+    }
 }
 
-while(true) {
+while (true) {
+    echo 'Geometry Calculator' . PHP_EOL;
+    echo '1. Calculate the Area of a Circle' . PHP_EOL;
+    echo '2. Calculate the Area of a Rectangle' . PHP_EOL;
+    echo '3. Calculate the Area of a Triangle' . PHP_EOL;
+    echo '4. Quit' . PHP_EOL;
 
-	echo "Geometry Calculator" . PHP_EOL;
-	echo "1. Calculate the Area of a Circle" . PHP_EOL;
-	echo "2. Calculate the Area of a Rectangle" . PHP_EOL;
-	echo "3. Calculate the Area of a Triangle" . PHP_EOL;
-	echo "4. Quit" . PHP_EOL;
-	$button = readline("Enter your choice (1-4): ");
-	echo PHP_EOL;
-	
-	switch ($button) {
-	case 1:
-		echo "Calculating the Area of a Circle" . PHP_EOL . PHP_EOL;
-		for ($i = 0; $i < 5; $i++) {
-			$radius = rand(1, 100);
-			echo "Test [" . ($i + 1) . "]: Radius = {$radius}. Area of a Circle = " . Geometry::circleArea($radius) . PHP_EOL;
-		}
-		echo PHP_EOL;
-		break;
-	case 2:
-		for ($i = 0; $i < 5 ; $i++) { 
-			$lengt = rand(1, 100);
-			$width = rand(1, 100);
-			echo "Test [" . ($i + 1) . "]: Length = {$lengt}. Width = {$width}. Area of a rectangle = " . Geometry::rectangleArea($lengt, $width) . PHP_EOL;
-		}
-		echo PHP_EOL;
-		break;
-	case 3:
-	for ($i = 0; $i < 5 ; $i++) { 
-			$base = rand(1, 100);
-			$height = rand(1, 100);
-			echo "Test [" . ($i + 1) . "]: Base = {$base}. Height = {$height}. Area of a triangle = " . Geometry::triangleArea($base, $height) . PHP_EOL;
-		}
-		echo PHP_EOL;
-		break;
-	case 4:
-		echo "Exit" . PHP_EOL;
-		return false;
-		break;
-	default:
-		echo PHP_EOL . "Wrong choice. Try Again !" . PHP_EOL . PHP_EOL;
-		break;
-	}
+    $button = readline('Enter your choice (1-4): ');
+    echo PHP_EOL;
+
+    switch ($button) {
+        case 1:
+            echo 'Calculating the Area of a Circle' . PHP_EOL . PHP_EOL;
+            for ($i = 0; $i < 5; $i++) {
+                $radius = rand(1, 100);
+                echo 'Test [' . ($i + 1) . ']: Radius = ' . $radius
+                    . ' Area of a Circle = ' . Geometry::circleArea($radius) . PHP_EOL;
+            }
+            echo PHP_EOL;
+            break;
+        case 2:
+            for ($i = 0; $i < 5; $i++) {
+                $length = rand(1, 100);
+                $width = rand(1, 100);
+                echo 'Test [' . ($i + 1) . ']: Length = ' . $length . ' Width = ' . $width
+                    . ' Area of a rectangle = ' . Geometry::rectangleArea($length, $width) . PHP_EOL;
+            }
+            echo PHP_EOL;
+            break;
+        case 3:
+            for ($i = 0; $i < 5; $i++) {
+                $base = rand(1, 100);
+                $height = rand(1, 100);
+                echo 'Test [' . ($i + 1) . ']: Base = ' . $base . ' Height = ' . $height
+                    . ' Area of a triangle = ' . Geometry::triangleArea($base, $height) . PHP_EOL;
+            }
+            echo PHP_EOL;
+            break;
+        case 4:
+            echo 'Exit' . PHP_EOL;
+            return false;
+        default:
+            echo PHP_EOL . 'Wrong choice. Try Again !' . PHP_EOL . PHP_EOL;
+            break;
+    }
 }

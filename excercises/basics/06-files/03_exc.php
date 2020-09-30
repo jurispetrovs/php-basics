@@ -8,6 +8,6 @@ Include your 2nd file into your main program file and execute function to displa
 
 */
 
-require '03-1_exc.php';
+require_once '03-1_exc.php';
 
 echo add_value('I love');

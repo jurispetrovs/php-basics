@@ -7,4 +7,4 @@ Create main file that includes this script and gives an output.
 
 */
 
-require '01-1_exc.php';
+require_once '01-1_exc.php';

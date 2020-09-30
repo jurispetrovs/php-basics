@@ -8,21 +8,23 @@ Your program must accept metric units.
 
 */
 
-function BMIcalculator(float $weightKg, float $heightCm) {
-	$weightPounds = $weightKg * 2.205;
-	$heightInches = $heightCm / 2.54;
-	return number_format($weightPounds * 703 / pow($heightInches, 2), 1);
+function calculatorBMI(float $weightKg, float $heightCm): float
+{
+    $weightPounds = $weightKg * 2.205;
+    $heightInches = $heightCm / 2.54;
+
+    return number_format($weightPounds * 703 / pow($heightInches, 2), 1);
 }
 
-$weightKg = (float) readline("Please enter your weight [KG]: ");
-$heightCm = (float) readline("Please enter your height [CM]: ");
+$weightKg = (float)readline('Please enter your weight [KG]: ');
+$heightCm = (float)readline('Please enter your height [CM]: ');
 
-$BMI = BMIcalculator($weightKg, $heightCm);
+$BMI = calculatorBMI($weightKg, $heightCm);
 
 if (18.5 < $BMI && $BMI < 25) {
-	echo "You weight is considered optimal. Your BMI is " . $BMI;
+    echo 'You weight is considered optimal. Your BMI is ' . $BMI;
 } elseif ($BMI < 18.5) {
-	echo "You are considered underweight. Your BMI is " . $BMI;
+    echo 'You are considered underweight. Your BMI is ' . $BMI;
 } else {
-	echo "You are considered overweight. Your BMI is " . $BMI;
+    echo 'You are considered overweight. Your BMI is ' . $BMI;
 }

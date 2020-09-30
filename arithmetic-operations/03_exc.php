@@ -9,27 +9,28 @@ The average is 50.5
 
 */
 
-function sumOfInteger(int $mim, int $max): int {
-	$sum = 0;
-	for ($i = $min; $i <= $max; $i++) { 
-		$sum += $i;
-	}
-	return $sum;
+function sumOfInteger(int $min, int $max): int
+{
+    $sum = 0;
+    for ($i = $min; $i <= $max; $i++) {
+        $sum += $i;
+    }
+    return $sum;
 }
 
-$min = (int) readline("Please enter min integer: ");
-$max = (int) readline("Please enter max integer: ");
+$min = (int)readline('Please enter min integer: ');
+$max = (int)readline('Please enter max integer: ');
 
-echo "The sum of {$min} to {$max} is " . sumOfInteger($min, $max) . PHP_EOL . "The average is " . (sumOfInteger($min, $max) / (($max - $min) + 1));
+echo 'The sum of ' . $min . ' to ' . $max . ' is ' . sumOfInteger($min, $max) . PHP_EOL . 'The average is ' . (sumOfInteger($min, $max) / (($max - $min) + 1));
 
 
 //	SECOND SOLUTION (WORKS) //
 
 /*
-$min = (int) readline("Please enter min integer: ");
-$max = (int) readline("Please enter max integer: ");
+$min = (int)readline('Please enter min integer: ');
+$max = (int)readline('Please enter max integer: ');
 
 $arr = range($min, $max);
 
-echo "The sum of {$min} to {$max} is " . array_sum($arr) . PHP_EOL .  "The average is " . array_sum($arr) / count($arr);
+echo 'The sum of ' . $min . ' to ' . $max . ' is ' . array_sum($arr) . PHP_EOL . 'The average is ' . array_sum($arr) / count($arr);
 */

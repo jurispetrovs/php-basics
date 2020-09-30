@@ -8,42 +8,38 @@ $numbers = [
     1456, 2165, 1457, 2456
 ];
 
-//todo
-echo "Original numeric array: ";
+echo 'Original numeric array: ';
 foreach ($numbers as $number) {
-	echo $number . ' ';
+    echo $number . ' ';
 }
 echo PHP_EOL;
 
-//todo
-echo "Sorted numeric array: ";
+echo 'Sorted numeric array: ';
 sort($numbers, SORT_NUMERIC);
 foreach ($numbers as $number) {
-	echo $number . ' ';
+    echo $number . ' ';
 }
 echo PHP_EOL . PHP_EOL;
 
 /*	String Array  */
 
 $words = [
-    "Java",
-    "Python",
-    "PHP",
-    "C#",
-    "C Programming",
-    "C++"
+    'Java',
+    'Python',
+    'PHP',
+    'C#',
+    'C Programming',
+    'C++'
 ];
 
-//todo
-echo "Original string array: ";
+echo 'Original string array: ';
 foreach ($words as $word) {
-	echo $word . ' ';
+    echo $word . ' ';
 }
 echo PHP_EOL;
 
-//todo
-echo "Sorted string array: ";
-sort($words, SORT_STRING); //SORT_NATURAL | SORT_FLAG_CASE
+echo 'Sorted string array: ';
+sort($words, SORT_STRING);
 foreach ($words as $word) {
-	echo $word . ' ';
+    echo $word . ' ';
 }

@@ -14,29 +14,30 @@ Drop to a new line after print each 20 numbers. If the user typed 100, the outpu
 
 */
 
-class FizzBuzz {
-
-	public static function printFizzBuzz(int $max) {
-		$number = 1;
-		while ($number <= $max) {
-			for ($i = 0; $i < 20 ; $i++) { 
-				if ($number % 3 === 0 && $number % 5 === 0) {
-					echo "FizzBuzz";
-				} elseif ($number % 3 === 0) {
-					echo "Fizz";
-				} elseif ($number % 5 === 0) {
-					echo "Buzz";
-				} else {
-					echo $number;
-				}
-				echo ' ';
-				$number++;
-			}
-			echo PHP_EOL;
-		}
-	}
+class FizzBuzz
+{
+    public static function printFizzBuzz(int $max): void
+    {
+        $number = 1;
+        while ($number <= $max) {
+            for ($i = 0; $i < 20; $i++) {
+                if ($number % 3 === 0 && $number % 5 === 0) {
+                    echo 'FizzBuzz';
+                } elseif ($number % 3 === 0) {
+                    echo 'Fizz';
+                } elseif ($number % 5 === 0) {
+                    echo 'Buzz';
+                } else {
+                    echo $number;
+                }
+                echo ' ';
+                $number++;
+            }
+            echo PHP_EOL;
+        }
+    }
 }
 
-$max = (int) readline("Please enter the number up to which to print numbers: ");
+$max = (int)readline('Please enter the number up to which to print numbers: ');
 
 FizzBuzz::printFizzBuzz($max);

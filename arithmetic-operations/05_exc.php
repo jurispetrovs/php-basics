@@ -6,20 +6,22 @@ Write a program that picks a random number from 1-100. Give the user a chance to
 
 */
 
-function game(int $playerNumber, int $pcNumber) {
-	if ($playerNumber === $pcNumber) {
-    	return "You guessed it!  What are the odds?!?" . PHP_EOL;
-	} elseif ($playerNumber > $pcNumber) {
-    	return "Sorry, you are too high.  I was thinking of {$pcNumber}" . PHP_EOL;
-	} elseif ($playerNumber < $pcNumber) {
-    	return "Sorry, you are too low.  I was thinking of {$pcNumber}" . PHP_EOL;
-	} else {
-		echo '1';
-	}
+function game(int $playerNumber, int $pcNumber): string
+{
+    if ($playerNumber === $pcNumber) {
+        return 'You guessed it!  What are the odds?!?' . PHP_EOL;
+    } elseif ($playerNumber > $pcNumber) {
+        return 'Sorry, you are too high.  I was thinking of ' . $pcNumber . PHP_EOL;
+    } elseif ($playerNumber < $pcNumber) {
+        return 'Sorry, you are too low.  I was thinking of ' . $pcNumber . PHP_EOL;
+    }
+    return 'error';
 }
 
-$pcNumber = (int) rand(1, 100);
-echo $pcNumber . PHP_EOL;
-$playerNumer = (int) readline("Please enter your number: ");
+$pcNumber = (int)rand(1, 100);
 
-echo game($playerNumer, $pcNumber);
+echo $pcNumber . PHP_EOL;
+
+$playerNumber = (int)readline('Please enter your number: ');
+
+echo game($playerNumber, $pcNumber);

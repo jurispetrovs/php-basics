@@ -12,7 +12,7 @@ $x = 1;
 $y = 12;
 
 if ($value > $x && $value < $y && $value % 2 == 0) {
-	echo "The value $value is greater than $x, less than $y and is an even number";
+    echo 'The value ' . $value . ' is greater than ' . $x . ', less than ' . $y . ' and is an even number';
 } else {
-	echo "The number $value does not fit the conditions";
+    echo 'The number ' . $value . 'does not fit the conditions';
 }

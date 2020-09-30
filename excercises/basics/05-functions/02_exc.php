@@ -6,8 +6,9 @@ Create a function that accepts 2 integer arguments. First argument is a base val
 
 */
 
-function multiplication($first, $second) {
-	return $first * $second;
+function multiplication(int $first, int $second): int
+{
+    return $first * $second;
 }
 
 echo multiplication(10, 5);

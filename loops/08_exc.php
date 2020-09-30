@@ -14,19 +14,22 @@ Max? 5
 
 */
 
-class NumberSquare {
-	public static function squarePattern() {
-		$min = (int) readline("Min? : ");
-		$max = (int) readline("Max? : ");
+class NumberSquare
+{
+    public static function squarePattern(): void
+    {
+        $min = (int)readline('Min? : ');
+        $max = (int)readline('Max? : ');
 
-		$numbers = $max - $min + 1;
-		for ($i = 0; $i < $numbers; $i++) { 
-			for ($j = 0; $j < $numbers; $j++) { 
-				echo $min + (($i + $j) % $numbers);
-			}
-			echo PHP_EOL;
-		}
-	}
+        $numbers = $max - $min + 1;
+
+        for ($i = 0; $i < $numbers; $i++) {
+            for ($j = 0; $j < $numbers; $j++) {
+                echo $min + (($i + $j) % $numbers);
+            }
+            echo PHP_EOL;
+        }
+    }
 }
 
 NumberSquare::squarePattern();

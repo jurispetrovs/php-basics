@@ -8,13 +8,14 @@ Create an non-associative array with 5 elements where 3 are integers, 1 float an
 
 $array = [5, 10, 12, 4.78, 'hello'];
 
-function doubleInteger($int) {
-	return $int * 2;
+function doubleInteger(int $int): int
+{
+    return $int * 2;
 }
 
-for ($i = 0; $i < count($array); $i++) { 
-	if (is_int($array[$i])) {
-		$array[$i] = doubleInteger($array[$i]);
-	}
-	echo $array[$i] . ' ';
+for ($i = 0; $i < count($array); $i++) {
+    if (is_int($array[$i])) {
+        $array[$i] = doubleInteger($array[$i]);
+    }
+    echo $array[$i] . ' ';
 }

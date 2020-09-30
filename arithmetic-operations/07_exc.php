@@ -8,10 +8,11 @@ Note: The correct value is -490.5m.
 
 */
 
-$accleration = -9.81;
+$acceleration = -9.81;
 $time = 10;
 $v = 0;
 $x = 0;
 
-$position = 0.5 * $accleration * pow($time, 2) + $v * $time + $x;
-echo "The position of an object after falling for 10 seconds is " . $position . "m";
+$position = 0.5 * $acceleration * pow($time, 2) + $v * $time + $x;
+
+echo 'The position of an object after falling for 10 seconds is ' . $position . 'm';

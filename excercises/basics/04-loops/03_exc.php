@@ -9,6 +9,6 @@ Given variable $x = 1 while $x is lower than 10, print out text "codelex". (Note
 $x = 1;
 
 while ($x < 10) {
-	echo 'codelex ';
-	$x++;
+    echo 'codelex ';
+    $x++;
 }

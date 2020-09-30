@@ -12,7 +12,7 @@ $z = 59;
 $var = 50;
 
 if ($var > $y && $var < $z) {
-	echo 'Correct';
+    echo 'Correct';
 } else {
-	echo 'Incorrect';
+    echo 'Incorrect';
 }

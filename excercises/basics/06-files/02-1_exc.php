@@ -1,9 +1,11 @@
 <?php
 
-function addition ($first, $second, $third) {
-	return $first + $second + $third;
+function addition(int $first, int $second, int $third): int
+{
+    return $first + $second + $third;
 }
 
-function multiplication ($first, $second) {
-	return $first * $second;
+function multiplication(int $first, int $second): int
+{
+    return $first * $second;
 }

@@ -14,28 +14,35 @@ Desired sum: 9
 
 */
 
-class RollTwoDice {
+class RollTwoDice
+{
+    public static function game()
+    {
+        $desiredSum = (int)readline('Desired sum: ');
 
-	public static function game() {
-		$desiredSum = (int) readline("Desired sum: ");
-		$dice = new RollTwoDice;
+        $dice = new RollTwoDice;
 
-		while(true) {
-			$firstDice = $dice->Rand();
-			$secondDice = $dice->Rand();
-			$randSum = $firstDice + $secondDice;
-			if ($randSum === $desiredSum) {
-				echo "$firstDice and $secondDice = $randSum" . PHP_EOL;
-				return false;
-			} else {
-				echo "$firstDice and $secondDice = $randSum" . PHP_EOL;
-			}
-		}
-	}
+        while (true) {
+            $firstDice = $dice->Rand();
+            $secondDice = $dice->Rand();
 
-	public $number = 0;
-	public function Rand() {
-		return $this->number = rand(1, 6);
-	}
+            $randSum = $firstDice + $secondDice;
+
+            if ($randSum === $desiredSum) {
+                echo $firstDice . ' and ' . $secondDice . ' = ' . $randSum . PHP_EOL;
+                return false;
+            } else {
+                echo $firstDice . ' and ' . $secondDice . ' = ' . $randSum . PHP_EOL;
+            }
+        }
+    }
+
+    public $number = 0;
+
+    public function Rand()
+    {
+        return $this->number = rand(1, 6);
+    }
 }
+
 RollTwoDice::game();

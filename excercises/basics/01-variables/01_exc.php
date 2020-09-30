@@ -10,4 +10,4 @@ $int = 10;
 $float = 10.10;
 $string = 'hello world';
 
-echo "Integer: $int; Float: $float; String: $string";
+echo 'Integer: ' . $int . ' Float: ' . $float . ' String: ' . $string;

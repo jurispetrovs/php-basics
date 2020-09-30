@@ -6,9 +6,15 @@ Write a program to compute the product of integers from 1 to 10 (i.e., 1×2×3×
 
 */
 
-function integersFactorial (int $n): int {
-	return gmp_fact($number);
-	//return $n ? $n * integersFactorial($n-1) : 1;
+$number = 10;
+
+function integersFactorial(int $n): int
+{
+    $sum = 1;
+    for ($i = 1; $i <= $n; $i++) {
+        $sum *= $i;
+    }
+    return $sum;
 }
 
-echo integersFactorial(10);
+echo 'The product of integers from 1 to ' . $number . ' is ' . integersFactorial($number) . PHP_EOL;

@@ -6,8 +6,9 @@ Create a function that accepts any string and returns the same value with added 
 
 */
 
-function add_value($string) {
-	return $string . ' codelex';
+function add_value(string $string): string
+{
+    return $string . ' codelex';
 }
 
 echo add_value('I love');

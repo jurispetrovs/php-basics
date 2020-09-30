@@ -7,7 +7,7 @@ Create file that includes this file and executes the functions and displays outp
 
 */
 
-require '02-1_exc.php';
+require_once '02-1_exc.php';
 
 echo addition(10, 3, 7) . PHP_EOL;
 echo multiplication(4, 6) . PHP_EOL;

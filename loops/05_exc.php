@@ -25,36 +25,37 @@ You got 10 points.
 
 */
 
-class Piglet {
-	public static function game() {
-		$rolling = true;
-		$dice = 0;
-		$score = 0;
+class Piglet
+{
+    public static function game(): void
+    {
+        $rolling = true;
+        $score = 0;
 
-		echo "Welcome to Piglet!" . PHP_EOL;
+        echo 'Welcome to Piglet!' . PHP_EOL;
 
-		while ($rolling === true) {
-			$dice = rand(1, 6);
-			echo "You rolled a " . $dice . "!" . PHP_EOL;
-			$score+=$dice;
+        while ($rolling === true) {
+            $dice = rand(1, 6);
+            echo 'You rolled a ' . $dice . '!' . PHP_EOL;
+            $score += $dice;
 
-			if ($dice === 1) {
-				$score = 0;
-				$rolling = false;
-			} else {
-				$answer = strtolower(readline("Roll again ? [y/n]: "));
-				if ($answer === 'y') {
-					$rolling = true;
-				} elseif ($answer === 'n') {
-					$rolling = false;
-				} else {
-					echo "Something goes wrong, game ended". PHP_EOL;
-					$rolling = false;
-				}
-			}
-		}
-		echo "You got {$score} points.";
-	}
+            if ($dice === 1) {
+                $score = 0;
+                $rolling = false;
+            } else {
+                $answer = strtolower(readline('Roll again ? [y/n]: '));
+                if ($answer === 'y') {
+                    $rolling = true;
+                } elseif ($answer === 'n') {
+                    $rolling = false;
+                } else {
+                    echo 'Something goes wrong, game ended' . PHP_EOL;
+                    $rolling = false;
+                }
+            }
+        }
+        echo 'You got ' . $score . ' points.';
+    }
 }
 
 Piglet::game();

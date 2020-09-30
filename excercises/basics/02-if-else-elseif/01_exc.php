@@ -10,7 +10,7 @@ $int = 10;
 $str = '10';
 
 if ($int === $str) {
-	echo "Yes, it's true";
+    echo "Yes, it's true";
 } else {
-	echo "No, it's false";
+    echo "No, it's false";
 }

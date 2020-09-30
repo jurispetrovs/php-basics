@@ -7,16 +7,18 @@ Create a person object with name, surname and age. Create a function that will d
 */
 
 $person = new stdClass();
+
 $person->name = 'Ellie';
 $person->surname = 'Flower';
 $person->age = 23;
 
-function ageCheck($age) {
-	if ($age >= 18) {
-		echo 'Person has reached 18 years of age'; 
-	} else {
-		echo 'Person has not reached 18 years of age';
-	}
+function ageCheck(int $age): void
+{
+    if ($age >= 18) {
+        echo 'Person has reached 18 years of age';
+    } else {
+        echo 'Person has not reached 18 years of age';
+    }
 }
 
 ageCheck($person->age);

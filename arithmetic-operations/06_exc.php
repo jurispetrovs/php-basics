@@ -6,28 +6,29 @@ Write a program called coza-loza-woza.php which prints the numbers 1 to 110, 11 
 
 */
 
-function cozaLozaWoza() {
-	$number = 1;
-	while ($number <= 110) {
-		for ($i = 0; $i <= 10; $i++) { 
-			if ($number % 3 === 0 && $number % 5 === 0) {
-				echo "CozaLoza";
-			} elseif ($number % 3 === 0 && $number % 7 === 0) {
-				echo "CozaWoza";
-			} elseif ($number % 7 === 0) {
-				echo "Woza";
-			} elseif ($number % 3 === 0) {
-				echo "Coza";
-			} elseif ($number % 5 === 0) {
-				echo "Loza";
-			} else {
-				echo $number;
-			}
-			echo ' ';
-			$number++;
-		}
-		echo PHP_EOL;
-	}
+function cozaLozaWoza(): void
+{
+    $number = 1;
+    while ($number <= 110) {
+        for ($i = 0; $i <= 10; $i++) {
+            if ($number % 3 === 0 && $number % 5 === 0) {
+                echo 'CozaLoza';
+            } elseif ($number % 3 === 0 && $number % 7 === 0) {
+                echo 'CozaWoza';
+            } elseif ($number % 7 === 0) {
+                echo 'Woza';
+            } elseif ($number % 3 === 0) {
+                echo 'Coza';
+            } elseif ($number % 5 === 0) {
+                echo 'Loza';
+            } else {
+                echo $number;
+            }
+            echo ' ';
+            $number++;
+        }
+        echo PHP_EOL;
+    }
 }
 
 cozaLozaWoza();

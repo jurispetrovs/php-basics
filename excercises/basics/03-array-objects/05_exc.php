@@ -28,14 +28,14 @@ Program should display concatenated value of - John & Jane Doe`s
 $items = [
     [
         [
-            "name" => "John",
-            "surname" => "Doe",
-            "age" => 50
+            'name' => 'John',
+            'surname' => 'Doe',
+            'age' => 50
         ],
         [
-            "name" => "Jane",
-            "surname" => "Doe",
-            "age" => 41
+            'name' => 'Jane',
+            'surname' => 'Doe',
+            'age' => 41
         ]
     ]
 ];

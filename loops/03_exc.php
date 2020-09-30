@@ -13,18 +13,19 @@ This could be used as part of an index for a book. To print out the dots, use ec
 
 */
 
-$firstWord = (string) readline("Enter first word: ");
-$secondWord = (string) readline("Enter second word: ");
-$twoWordLengh = strlen($firstWord) + strlen($secondWord);
+$firstWord = (string)readline('Enter first word: ');
+$secondWord = (string)readline('Enter second word: ');
 
-if ($twoWordLengh < 30) {
-	echo $firstWord;
-	for ($i = 0; $i < 30 - $twoWordLengh; $i++) { 
-	echo ".";
-	}
-	echo $secondWord;
+$twoWordLength = strlen($firstWord) + strlen($secondWord);
+
+if ($twoWordLength < 30) {
+    echo $firstWord;
+
+    for ($i = 0; $i < 30 - $twoWordLength; $i++) {
+        echo '.';
+    }
+
+    echo $secondWord;
 } else {
-	echo "Total word length exceeds 30";
+    echo 'Total word length exceeds 30';
 }
-
-

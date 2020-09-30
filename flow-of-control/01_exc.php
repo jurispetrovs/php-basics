@@ -1,14 +1,15 @@
 <?php
 
-echo "Input the 1st number: ";
-$a = (int) readline();
+/*
 
-echo "Input the 2nd number: ";
-$b = (int) readline();
+print the largest number
 
-echo "Input the 3rd number: ";
-$c = (int) readline();
+*/
 
-//todo print the largest number
+$a = (int)readline('Input the 1st number: ');
 
-echo "Largest number is " . max($a, $b, $c);
+$b = (int)readline('Input the 2nd number: ');
+
+$c = (int)readline('Input the 3rd number: ');
+
+echo 'Largest number is ' . max($a, $b, $c);
